@@ -4,17 +4,28 @@ main{
 }
 
 body{
-  background-color: tomato;
-
+  background-color: #A10B0B;
   text-align: center;
 }
 
 h1{
-  color: #3C8D0D;
+  color: #437834;
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-transform: uppercase;
+}
+
+ul{
+  list-style-position: inside;
 }
 
 li{
     color: #ffffff;
+    list-style-type: none;
+}
+
+a{
+  color: #ffffff;
 }
 
 input{

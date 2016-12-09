@@ -30,17 +30,33 @@ var populateList = function(albums){
     albums.forEach(function(album){
 
     var li = document.createElement('li');
-    li.innerText = "Artist: " + album.artists[0].name + "\nAlbum: " + album.name;
+    li.innerText = "Artist: " + album.artists[0].name;
     ul.appendChild(li);
+
+    // var albumLink = document.createElement('a');
+    // albumLink.innerText = "\nListen on spotify";
+    // albumLink.href = album.external_urls.spotify;
+    // ul.appendChild(albumLink);
+
+    var a = document.createElement("a");
+    var newItem = document.createElement("li");
+    a.textContent = album.name;
+    a.setAttribute('href', album.external_urls.spotify);
+    newItem.appendChild(a);
+    ul.appendChild(newItem);
+
+    var pageBreak = document.createElement('br');
+    ul.appendChild(pageBreak);
 
     var albumImage = document.createElement('img');
     albumImage.src = album.images[1].url;
     ul.appendChild(albumImage);
 
-    var albumLink = document.createElement('a');
-    albumLink.innerText = "\nListen on spotify";
-    albumLink.href = album.external_urls.spotify;
-    ul.appendChild(albumLink);
+    var pageBreak = document.createElement('br');
+    ul.appendChild(pageBreak);
+
+    var pageBreak = document.createElement('br');
+    ul.appendChild(pageBreak);
 
     })
 
