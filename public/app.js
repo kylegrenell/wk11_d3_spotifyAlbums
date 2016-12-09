@@ -32,9 +32,9 @@ var populateList = function(albums){
     li.innerText = "Artist: " + album.artists[0].name + "\nAlbum: " + album.name;
     ul.appendChild(li);
 
-    // var li = document.createElement('li');
-    // li.innerText = ;
-    // ul.appendChild(li);
+    var albumImage = document.createElement('img');
+    albumImage.src = album.images[1].url;
+    ul.appendChild(albumImage);
     })
 
 }
