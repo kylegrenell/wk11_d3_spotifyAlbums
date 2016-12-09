@@ -28,6 +28,7 @@ var populateList = function(albums){
   var ul = document.getElementById('albums');
 
     albums.forEach(function(album){
+
     var li = document.createElement('li');
     li.innerText = "Artist: " + album.artists[0].name + "\nAlbum: " + album.name;
     ul.appendChild(li);
@@ -35,6 +36,12 @@ var populateList = function(albums){
     var albumImage = document.createElement('img');
     albumImage.src = album.images[1].url;
     ul.appendChild(albumImage);
+
+    var albumLink = document.createElement('a');
+    albumLink.innerText = "\nListen on spotify";
+    albumLink.href = album.external_urls.spotify;
+    ul.appendChild(albumLink);
+
     })
 
 }
